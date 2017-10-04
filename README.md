@@ -24,6 +24,7 @@ Extension displays the top most sold products for your stores.
     ```
 ## Display and configuration
 A shortcode to Homepage and to other CMS pages or CMS blocks.
+
     ```bash
 	{{block class='Faonni\ProductMostSold\Block\ProductList' 
 			template='Faonni_ProductMostSold::product/list/items.phtml' 
