@@ -1,10 +1,15 @@
 # Magento2 Product Most Sold
+
 Extension displays the top most sold products for your stores.
 
 ### Home page
+
 <img alt="Magento2 ProductMostSold" src="https://karliuka.github.io/m2/product-most-sold/home.png" style="width:100%"/>
+
 ### Category page
+
 <img alt="Magento2 ProductMostSold" src="https://karliuka.github.io/m2/product-most-sold/category.png" style="width:100%"/>
+
 ## Install with Composer as you go
 
 1. Go to Magento2 root folder
@@ -22,14 +27,10 @@ Extension displays the top most sold products for your stores.
 	php bin/magento setup:upgrade
 	php bin/magento setup:static-content:deploy
     ```
+    
 ## Display and configuration
 
-A shortcode to Homepage and to other CMS pages or CMS blocks.
-
-    ```bash
-	php bin/magento setup:upgrade
-	php bin/magento setup:static-content:deploy
-    ```
+1. A shortcode to Homepage and to other CMS pages or CMS blocks.
 
     ```bash
 	{{block class='Faonni\ProductMostSold\Block\ProductList' 
@@ -40,9 +41,9 @@ A shortcode to Homepage and to other CMS pages or CMS blocks.
 	}}
     ```
     
-A Layout Update XML to all categories.
+2. A Layout Update XML to all categories.
 
-    ```bash
+    ```xml
 	 <referenceBlock name="catalog.product.most.sold">
 		 <action method="setTitle">
 			 <argument name="title" xsi:type="string" translate="true">Most Sold Products of Category</argument>
