@@ -27,6 +27,11 @@ Extension displays the top most sold products for your stores.
 A shortcode to Homepage and to other CMS pages or CMS blocks.
 
     ```bash
+	php bin/magento setup:upgrade
+	php bin/magento setup:static-content:deploy
+    ```
+
+    ```bash
 	{{block class='Faonni\ProductMostSold\Block\ProductList' 
 			template='Faonni_ProductMostSold::product/list/items.phtml' 
 			title='Most Sold Products' 
