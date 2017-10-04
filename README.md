@@ -25,27 +25,29 @@ Extension displays the top most sold products for your stores.
 ## Display and configuration
 A shortcode to Homepage and to other CMS pages or CMS blocks.
     ```bash
-{{block class='Faonni\ProductMostSold\Block\ProductList' 
-		template='Faonni_ProductMostSold::product/list/items.phtml' 
-		title='Most Sold Products' 
-		interval='45'
-		num_products='6'
-}}
+	{{block class='Faonni\ProductMostSold\Block\ProductList' 
+			template='Faonni_ProductMostSold::product/list/items.phtml' 
+			title='Most Sold Products' 
+			interval='45'
+			num_products='6'
+	}}
     ```
+    
 A Layout Update XML to all categories.
-    ```xml
-<referenceBlock name="catalog.product.most.sold">
-	<action method="setTitle">
-		<argument name="title" xsi:type="string" translate="true">Most Sold Products of Category</argument>
-	</action>
-	<action method="setNumProducts">
-		<argument name="num_products" xsi:type="string">6</argument>
-	</action>
-	<!-- last 45 days, if 0 - all lifetime -->
-	<action method="setInterval">
-		<argument name="interval" xsi:type="string">45</argument>
-	</action>	
-</referenceBlock>
+
+    ```bash
+	 <referenceBlock name="catalog.product.most.sold">
+		 <action method="setTitle">
+			 <argument name="title" xsi:type="string" translate="true">Most Sold Products of Category</argument>
+		 </action>
+		 <action method="setNumProducts">
+			 <argument name="num_products" xsi:type="string">6</argument>
+		 </action>
+		 <!-- last 45 days, if 0 - all lifetime -->
+		 <action method="setInterval">
+			 <argument name="interval" xsi:type="string">45</argument>
+		 </action>	
+	 </referenceBlock>
     ```
     
 * [Magento2 Product Most Ordered](https://github.com/karliuka/m2.ProductMostOrdered)
