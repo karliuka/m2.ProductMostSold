@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2011-2017 Karliuka Vitalii(karliuka.vitalii@gmail.com)
+ * 
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<!--
+	Handle product most sold
+	-->			
+	<body>
+        <referenceContainer name="content">
+            <block class="Faonni\ProductMostSold\Block\ProductList" name="catalog.product.most.sold" template="Faonni_ProductMostSold::product/list/items.phtml" before="-">
+                <arguments>
+                    <argument name="type" xsi:type="string">most-sold</argument>
+                    <argument name="title" xsi:type="string" translate="true">Most Sold Products</argument>
+					<argument name="num_products" xsi:type="string">6</argument>
+					<!-- last 45 days, if 0 - all lifetime -->
+					<argument name="interval" xsi:type="string">45</argument>          
+                </arguments>
+                <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="product.most.sold.addto" as="addto">
+                    <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare" name="product.most.sold.addto.compare" as="compare" template="Magento_Catalog::product/list/addto/compare.phtml"/>
+                </block>			              
+            </block>
+        </referenceContainer>
+    </body>
+</page>
