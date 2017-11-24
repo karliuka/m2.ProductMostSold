@@ -27,6 +27,8 @@ Extension displays the top most sold products for your stores.
 	php bin/magento setup:upgrade
 	php bin/magento setup:static-content:deploy
     ```
+
+4. Refresh Statistics
     
 ## Display and configuration
 
