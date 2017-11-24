@@ -10,18 +10,16 @@ use Magento\Catalog\Model\ResourceModel\Product\Collection as ProductCollection;
 use Magento\Sales\Model\Order;
 
 /**
- * Catalog product most sold items collection
- *
- * @SuppressWarnings(PHPMD.LongVariable)
+ * Product Most Sold Collection
  */
 class Collection extends ProductCollection
 {
     /**
-     * Add orders count
+     * Add Orders Count
      *
      * @param string $from
      * @param string $to
-     * @return $this
+     * @return \Faonni\ProductMostSold\Model\ResourceModel\Reports\Product\Collection
      */
     public function addOrdersCount($from='', $to='')
     {
